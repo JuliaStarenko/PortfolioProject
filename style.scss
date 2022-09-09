@@ -43,44 +43,37 @@ hr {
 
 /* header and navigation */
 
-header {
-  height: 91px;
-  left: 0;
-  right: 0;
-  top: 0;
-  padding: 0px 7%;
-  display: flex;
-  align-items: center;
-  z-index: 99;
-  margin: auto;
-  max-width: 1330px;
+.logo {
+  margin: 1rem;
 }
 
-header .navbar {
- float: left;
- gap: 10px;
+header {
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: auto;
+  max-width: 1200px;
 }
 
 .navbar {
   display: flex;
 }
 
-header .navbar a {
-  padding: 20px;
+li {
+  padding: 17px;
+  list-style-type: none;
+  display: inline;
 }
 
-a:hover {
-  background-color: var(--bg-content);
+a {
+  text-transform: uppercase;
+  color: var(--bg-sub-color);
+  text-decoration: none;
 }
 
 a.active {
   color: var(--bg-main-color);
-}
-
-a {
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--bg-sub-color);
 }
 
 a:link {
@@ -89,6 +82,10 @@ a:link {
 
 a:visited {
   text-decoration: none;
+}
+
+a:hover {
+  background-color: var(--bg-content);
 }
 
 .burger-menu {
@@ -207,11 +204,10 @@ button {
 /* for tablets: */
 
 @media only screen and (max-width: 880px) {
-  .navbar a {
-    position: fixed;
-    width: 100%;
-    text-align: center;
-    display: block;
+  
+  li {
+    padding: 5px;
+    display: inline;
   }
    
   .main-card {
@@ -243,23 +239,31 @@ button {
 
 /* for mobile phones: */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
 
-  .navbar {
-    background-color: var(--bg-main-color);
+  header {
   }
   
-  header .navbar {
+  .navbar {
+    background-color: var(--bg-main-color);
     position: fixed;
-    inset: 0 0 50% 0;
+    inset: 0 0 75% 0;
+  }
+  
+  li {
+    padding: 17px;
+    display: block;
   }
 
   #navbar {
-    padding-top: 60px;
   }
 
-  .navbar a {
-    flex-direction: column;
+  a {
+    color: var(--bg-content);
+  }
+
+  a.active {
+    color: var(--bg-content);
   }
 
   .burger-menu {
