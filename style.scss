@@ -15,8 +15,20 @@
   box-sizing: border-box;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
 body {
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 main {
@@ -115,16 +127,20 @@ a:hover {
   grid-column: 1 / 5;
 }
 
-.card_section {
+.card-section {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center; 
   padding-block: 2rem;
   margin-inline: auto;
-} 
+}
 
-.content {
+.main-card {
+  padding: 8px;
+}
+
+.main-card-content, .content {
   padding: 15px;
 }
 
@@ -132,12 +148,14 @@ a:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.main-card, .card {
-  background-color: var(--bg-content);
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.main-card {
-  padding: 8px;
+.main-card, .card {
+  background-color: var(--bg-content);
 }
 
 /* images styling*/
@@ -147,19 +165,39 @@ a:hover {
   display: block;
 }
 
-.picture img {
-  max-height: 180px;
-  border-radius: 50%;
-  padding-top: 10px;
-}
-
 .main_picture img {
   float: left;
   height: 210px;
   margin-right: 25px;
 }
 
+.picture img {
+  max-height: 180px;
+  border-radius: 50%;
+  padding-top: 10px;
+}
+
 /* buttons styling*/
+
+button {
+  border: none;
+  border-radius: 5px;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.main_button, .card_button {
+  color: var(--content_color);
+}
+
+.main_button {
+  background-color: var(--bg-main-color);
+  float: right;
+  margin-right: 15px;
+  padding: 7px 45px;
+}
 
 .card_button {
   background-color: var(--bg-sub-color);
@@ -167,22 +205,7 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 15px;
-}
-
-.main_button {
-  background-color: var(--bg-main-color);
-  float: right;
-}
-
-.button {
-  padding-right: 15px;
-}
-
-button {
-  padding: 7px 45px;
-  border: none;
-  border-radius: 5px;
-  color: var(--content_color);
+  padding: 7px 75px;
 }
 
 /* footer section */
@@ -221,7 +244,7 @@ button {
     margin-bottom: 15px;
   }
 
-  .card_section {
+  .card-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -247,15 +270,20 @@ button {
   .navbar {
     background-color: var(--bg-main-color);
     position: fixed;
-    inset: 0 0 75% 0;
+    z-index: 1000;
+    inset: 0 0 70% 0;
+    transform: translateX(100%);
+    padding-top: 115px;
   }
   
   li {
-    padding: 17px;
     display: block;
+    margin-top: auto;
+    padding: 8px;
   }
 
-  #navbar {
+  .navbar[data-visible="true"] {
+    transform: translateX(0%);
   }
 
   a {
@@ -267,6 +295,19 @@ button {
   }
 
   .burger-menu {
+  }
+
+  .mobile-menu {
+    background-color: var(--content_color);
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    top: 20px;
+    right: 2rem;
+  }
+
+  .mobile-menu img {
+    height: 80px;
   }
 
   h2 {
@@ -291,7 +332,7 @@ button {
     margin-right: auto;
   }
 
-  .card_section {
+  .card-section {
     display: grid;
     grid-template-columns: 1fr;
   }

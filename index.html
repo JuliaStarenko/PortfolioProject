@@ -8,44 +8,42 @@
   </head>
   <body>
     <header>
-    <div>
-      <img src="images/Logo.jpg" class="logo" alt="Star"></div>
-    <nav id="navbar" class="navbar">
-      <ul>
-        <li><a href="#">hečímldl</a></li>
-        <li><a href="index.html" class="active">dřefruprodi</a></li>
-        <li><a href="#">vřouhlo</a></li>
-        <li><a href="#">uver</a></li>
-        <li><a href="#">dlytetinen</a></li>
-        <li><a href="#">tesnidepab</a></li>
-    </ul>
-    </nav>
-  </header>   
+      <div>
+        <img src="images/Logo.jpg" class="logo" alt="Star">
+      </div>
+      <button class="mobile-menu" aria-controls="navbar" aria-expanded="false"><img src="images/mobile-menu-icon-orange.png" alt="Button menu"><span class="sr-only">Menu</span></button>
+      <nav id="navbar" data-visible="false" class="navbar">
+        <ul>
+          <li><b><a href="#">hečímldl</a></b></li>
+          <li><b><a href="index.html" class="active">dřefruprodi</a></b></li>
+          <li><b><a href="#">vřouhlo</a></b></li>
+          <li><b><a href="#">uver</a></b></li>
+          <li><b><a href="#">dlytetinen</a></b></li>
+          <li><b><a href="#">tesnidepab</a></b></li>
+        </ul>
+      </nav>
+    </header>   
     <main>
       <hr>   
-      <article class="card_section">
+      <article class="card-section">
         <section class="main-card grid-col-span-5">
           <div class="container">
             <div class="main_picture"><img src="images/owl.jpg" alt="Owl"></div>
             <div class="main-content">
               <h2><b>I am a gowlman!</b></h2>
-            <p class="content">Vych prán titě moušlu tič šlam. Uťa zkedi vlyskájni pi? Blaťti dlavlá i zrýčla. O uněň žlá ďůtrch v vyřo ústuj k ogro udi 
+              <p class="main-card-content">Vych prán titě moušlu tič šlam. Uťa zkedi vlyskájni pi? Blaťti dlavlá i zrýčla. O uněň žlá ďůtrch v vyřo ústuj k ogro udi 
               štašt. Mounětlysrýď uhrýl i dip? Frarůk nibru a řuď? úcet tlužvičí pech déju zkykřoužlarfů zrest hrtist lyglách křaz děpocrutře.</p> 
-            <p class="content">Ni v pamy tě vyněsk srustý zkeď něstkuhlabyž slydi pemi a vuj, zezru niz skýz punib někro ně umoni bydim, nidli tičfrebiřou. Vot těďti 
+              <p class="main-card-content">Ni v pamy tě vyněsk srustý zkeď něstkuhlabyž slydi pemi a vuj, zezru niz skýz punib někro ně umoni bydim, nidli tičfrebiřou. Vot těďti 
               sle. Drutlíd zlytěd moc nibí.</p>
             </div>
-           <div class="button"><button class="main_button"><b>bedlaaa!</b></button></div>
+           <button class="main_button"><b>bedlaaa!</b></button>
           </div>
         </section> 
         <section class="card">
             <div class="picture"><img src="images/duch_minulosti_1.jpg" alt="Avatar"></div>
-          <div>
             <h3><b>Drutlíd zlytěd</b></h3>
             <p class="content">Vych prán titě moušlu tič šlam. Uťa zkedi vlyskájni pi? Blaťti dlavlá i zrýčla.</p>
-            </div>
-            <div>
             <button id="modal1" class="card_button"><b>play!</b></button>
-          </div>
         </section> 
         <section class="card">
           <div class="picture"><img src="images/duch_minulosti_1.jpg" alt="Avatar"></div>
@@ -54,20 +52,16 @@
             <button id="modal2" class="card_button"><b>play!</b></button>
         </section>
         <section class="card">
-          <div class="container">
             <div class="picture"><img src="images/duch_minulosti_1.jpg" alt="Avatar"></div>
             <h3><b>Drutlíd zlytěd</b></h3>
             <p class="content">Vych prán titě moušlu tič šlam. Uťa zkedi vlyskájni pi? Blaťti dlavlá i zrýčla.</p>
             <button id="modal3" class="card_button"><b>play!</b></button>
-          </div>
         </section>
         <section class="card">
-          <div class="container">
             <div class="picture"><img src="images/duch_minulosti_1.jpg" alt="Avatar"></div>
             <h3><b>Drutlíd zlytěd</b></h3>
             <p class="content">Vych prán titě moušlu tič šlam. Uťa zkedi vlyskájni pi? Blaťti dlavlá i zrýčla.</p>
             <button id="modal4" class="card_button"><b>play!</b></button>
-          </div>
         </section>
       </article>
        <!-- The Modal -->
@@ -80,6 +74,7 @@
     <footer class="footer">
       <p class="text">2022 &copy crazy owl design</p>
     </footer>
+    <script src="navigation.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
