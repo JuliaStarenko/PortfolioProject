@@ -180,6 +180,7 @@ button {
 
 .main_button, .card_button {
   color: var(--content_color);
+  cursor: pointer;
 }
 
 .main_button {
@@ -273,9 +274,6 @@ button {
 
 @media only screen and (max-width: 700px) {
 
-  header {
-  }
-  
   .navbar {
     background-color: var(--bg-main-color);
     position: fixed;
@@ -317,7 +315,7 @@ button {
     display: block;
     position: absolute;
     z-index: 9999;
-    top: 20px;
+    top: 1.25rem;
     right: 2rem;
   }
 
@@ -330,7 +328,7 @@ button {
     display: block;
     position: absolute;
     z-index: 9999;
-    top: 35px;
+    top: 2.188rem;
     right: 3rem;
   }
 
@@ -378,64 +376,18 @@ button {
 
 /* modal */
 
-#modal1, #modal2, #modal3, #modal4 {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-#modalImg:hover {opacity: 0.7;}
-
-/* the modal (background) */
-
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.9);
+  height: 50%;
+  width: 50%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-/* modal content (image) */
-
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
+.modal::backdrop {
+  background: rgb(0 0 0 / 0.4);
 }
 
-@-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
-}
-
-/* the close button */
-
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
+.modal-picture {
 }

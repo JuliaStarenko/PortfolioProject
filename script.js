@@ -1,14 +1,13 @@
-var modal = document.getElementById("myModal");
+const modal = document.querySelector(".modal");
+const modalOpen = document.querySelectorAll(".modal-open");
+const modalClose = document.querySelector(".modal-closed");
 
-var img = document.getElementById("modal1", "modal2", "modal3", "modal4");
-var modalImg = document.getElementById("img01");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = this.src;
+for (i of modalOpen) {
+  i.addEventListener("click", () => {
+    modal.showModal();
+  });
 }
 
-var span = document.getElementsByClassName("close")[0];
-
-span.onclick = function() { 
-  modal.style.display = "none";
-}
+modalClose.addEventListener("click", () => {
+  modal.close();
+})
