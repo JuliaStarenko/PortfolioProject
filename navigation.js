@@ -1,14 +1,24 @@
 const navMenu = document.querySelector(".navbar");
-const mobileButton = document.querySelector(".mobile-menu");
+const mobileButtonOpen = document.querySelector(".mobile-menu-open");
+const mobileButtonClose = document.querySelector(".mobile-menu-close");
 
-mobileButton.addEventListener("click", () => {
+mobileButtonOpen.addEventListener("click", () => {
     const visibility = navMenu.getAttribute("data-visible");
 
     if (visibility === "false") {
         navMenu.setAttribute("data-visible", true);
-        mobileButton.setAttribute("aria-expanded", true);
-    } else {
+        mobileButtonOpen.setAttribute("aria-expanded", true);
+        mobileButtonClose.setAttribute("aria-expanded", false);
+    } 
+
+});
+
+mobileButtonClose.addEventListener("click", () => {
+    const visibility = navMenu.getAttribute("data-visible");
+
+    if (visibility === "true") {
         navMenu.setAttribute("data-visible", false);
-        mobileButton.setAttribute("aria-expanded", false);
-    }
+        mobileButtonClose.setAttribute("aria-expanded", true);
+        mobileButtonOpen.setAttribute("aria-expanded", false);
+    } 
 });
