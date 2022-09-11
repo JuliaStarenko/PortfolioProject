@@ -222,6 +222,36 @@ button {
   padding: 20px;
 }
 
+/* modal */
+
+dialog {
+  border: none !important;
+}
+
+.modal {
+  left: 50%;
+  top: 50%;
+  padding:10px;
+  transform: translate(-50%, -50%);
+}
+
+.modal::backdrop {
+  background: rgb(0 0 0 / 0.7);
+}
+
+.modal-picture img {
+  height: 312px;
+  width: 554px;
+}
+
+.modal-closed {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 0;
+  top: 0;
+}
+
 /* Media queries */
 
 /* for tablets: */
@@ -372,22 +402,4 @@ button {
   .footer {
     position: static;
   } 
-}
-
-/* modal */
-
-.modal {
-  height: 50%;
-  width: 50%;
-  position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.modal::backdrop {
-  background: rgb(0 0 0 / 0.4);
-}
-
-.modal-picture {
 }
