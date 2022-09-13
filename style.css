@@ -72,8 +72,7 @@ header {
 .navbar {
   display: flex;
 }
-
-li {
+.navbar li {
   padding: 17px;
   list-style-type: none;
   display: inline;
@@ -126,6 +125,10 @@ a:hover {
   margin-inline: auto;
 }
 
+.main-card, .card {
+  background-color: var(--bg-content);
+}
+
 .main-card {
   padding: 8px;
 }
@@ -142,10 +145,6 @@ a:hover {
   display: flex;
   justify-content: center;
   flex-direction: column;
-}
-
-.main-card, .card {
-  background-color: var(--bg-content);
 }
 
 /* images styling*/
@@ -202,14 +201,12 @@ button {
   margin: 0px auto;
   padding: 0px 15px;
 }
-
-.bottom {
+.footer .bottom {
   max-width: 1200px;
   margin: 0px auto;
   padding: 0px 15px;
 }
-
-.text {
+.footer .text {
   color: var(--bg-main-color);
   text-align: center;
   padding: 20px;
@@ -296,7 +293,7 @@ dialog {
     transform: translateX(100%);
     transition: transform 250ms ease-out;
   }
-  li {
+  .navbar li {
     display: block;
     margin-top: auto;
     padding: 8px;
